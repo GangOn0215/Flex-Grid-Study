@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/default.css">
+    <title>Document</title>
+    <style>
+
+        /* 
+            Media Query [ 미디어 쿼리 ]
+            화면의 해상도에 따라 모양이 바뀐다.
+        */
+        .display-switch {
+            margin: 10px;
+        }
+        .flex-container {
+            display: flex;
+            flex-direction: column;
+        }
+        @media (min-width: 600px) {
+            .flex-container {
+                display: flex;
+                flex-direction: row;
+            }
+
+            .flex-item {
+                flex: 1;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="flex-container">
+        <div class="flex-item">AAAAAAAAAAA</div>
+        <div class="flex-item">BBB</div>
+        <div class="flex-item">CCCCC</div>
+    </div>
+    <div class="display-switch">
+        <label for="block">block</label>
+        <input type="radio" class="display" name="display" value="block">
+        <label for="flex">flex</label>
+        <input type="radio" class="display" name="display" value="flex">
+    </div>
+    <script>
+        const flexContainer = document.querySelector('.flex-container');
+
+        document.querySelectorAll('.display').forEach((item) => {
+            
+            item.addEventListener('click', (event) => {
+                console.log(event.target.value);
+                flexContainer.style.display = event.target.value;
+            });
+
+        });
+    </script>
+</body>
+
+</html>
