@@ -1,0 +1,80 @@
+@font-face {
+  font-family: 'bombaram';
+  src: url(bombaram.ttf);
+}
+
+html, body {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  /* font-family: Verdana, sans-serif; */
+  font-family: bombaram;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ol, ul, li {
+  list-style: none;
+}
+
+header .banner {
+  height: 150px;
+  font-size: 3em;
+  line-height: 150px;
+  text-align: center;
+  background-color: #F8F9FA;
+  border-bottom: 1px solid #e4e8eb;
+}
+
+header nav {
+  display: flex;
+  height: 70px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+  background-color: #FFFFFF4D;
+  align-items: center;
+  justify-content: space-around;
+}
+
+header nav a {
+  font-size: 1.7em;
+}
+
+.content {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+  border: 1px solid #EFEFF1;
+    border-left: 2px solid #EFEFF1;
+  flex: 1;
+}
+
+.aside {
+  display: flex;
+  width: 250px;
+  background-color: #EFEFF1;
+  flex: none;
+}
+
+.main {
+  display: flex;
+  overflow: auto;
+  flex: 1;
+}
